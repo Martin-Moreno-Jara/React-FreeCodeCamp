@@ -1,6 +1,7 @@
 import React from 'react';
+import '../stylesheets/testimonio.css'
 
-function Testimonio(){
+export function Testimonio(){
   return (
     <div className='contenedor-testimonio'>
       <img 
@@ -17,4 +18,3 @@ function Testimonio(){
     </div>
   );
 }
-export default Testimonio;
