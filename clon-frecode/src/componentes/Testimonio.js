@@ -1,18 +1,21 @@
 import React from 'react';
 import '../stylesheets/testimonio.css'
 
-export function Testimonio(){
+export function Testimonio(props){
   return (
     <div className='contenedor-testimonio'>
       <img 
       className='imagen-testimonio'
-      src={require('../images/kdb.webp')}
+      src={require(`../images/${props.imagen}`)}
       alt='El GOAT'/>
 
       <div className='contenedor-texto-testimonio'>
-        <p className='nombre-pais'>Kevin de Bruyne - Belgium</p>
-        <p className='posicion'>Mediocampista ofensivo</p>
-        <p className='honores'>1xChampions League, 5xPremier League</p>
+        <p className='nombre-pais'>{props.nombre} - {props.pais}</p>
+        <p className='posicion'>{props.posicion}</p>
+        <p className='equipo'>
+          <strong>{props.equipo}  </strong>
+        </p>
+        <p className='honores'>{props.honores}</p>
       </div>
 
     </div>

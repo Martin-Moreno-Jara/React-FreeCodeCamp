@@ -23,9 +23,8 @@
 }
 .nombre-pais{
     font-size: 1.3rem;
-
 }
-.posicion{
+.posicion,.equipo{
     font-size: 1.3rem;
     margin-top: 15px;
     padding-bottom: 30px;
