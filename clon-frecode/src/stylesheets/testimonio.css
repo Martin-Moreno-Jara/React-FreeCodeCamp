@@ -10,7 +10,8 @@
 }
 .imagen-testimonio{
     height: 100%;
-    width: auto;
+    width: 400px;
+    object-fit: cover;
 }
 .contenedor-texto-testimonio{
     width: 100%;

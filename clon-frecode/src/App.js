@@ -12,28 +12,36 @@ function App() {
         pais='Belgium'
         posicion='Attacking Midfielder'
         equipo='Manchester City'
-        honores='1x Champions League, 5x Premier League, 2x FA Cup, 4x Carabao Cup'
-        imagen='kdb.webp'
+        honores={<p>Champions League x1<br/>
+        Premier League x5 <br/>
+        FA Cup x2<br/>
+        Carabao Cup x4</p> }
+        imagen='kdb.jpg'
          />
         
         <Testimonio
-        nombre='Rodrigo Hernandez Cascante (Rodri) '
+        nombre={<p>Rodrigo Hernandez Cascante (<strong>Rodri</strong>)</p>}
         pais='Spain'
         posicion='Central Midfielder'
         equipo='Manchester City'
-        honores='1x Champions League, 4x Premier League, 1x FA Cup, 3x Carabao Cup'
+        honores={<p>Champions League x1<br/>
+                Premier League x4 <br/>
+                FA Cup x1<br/>
+                Carabao Cup x4</p> }
         imagen='rodri.jpg'
          />
         
         <Testimonio
-        nombre='Lionel Andres Messi Cuccitini'
+        nombre= {<p>Lionel Andrés <strong>Messi</strong> Cuccitini</p>} 
         pais='Argentina'
         posicion='Attacker, Winger'
         equipo='Inter Miami'
-        honores='1x World Cup, 4x Champions League, 12x La Liga'
+        honores={<p>World Cup x1<br/>
+        Champions League x4 <br/>
+        La Liga x10<br/>
+        Copa del Rey x7</p> }
         imagen='messi.jpg'
-         />
-        
+         />       
 
       </div>
     </div>
