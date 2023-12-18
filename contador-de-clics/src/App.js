@@ -1,8 +1,14 @@
 import './App.css';
 import jjkLogo from './images/jjk-logo.png';
 import Boton from './componentes/Boton';
+import Contador from './componentes/Contador';
+import {useState} from 'react';
 
 function App() {
+  const [numClics, setNumClics] = useState(0);
+
+  const manejarClic = ()=>{setNumClics(numClics+1);}    
+  const reiniciarContador = ()=>{setNumClics(0);}
   return (
     <div className="App">
      <div className="jjk-logo-contenedor">
@@ -16,17 +22,22 @@ function App() {
         <h2>
           Contador de eventos traumaticos de Itadori 
         </h2>
+        <Contador
+        numClics={numClics}
+        />
+
         <div className='contenedor-botones'>
+
         <Boton
       texto='Aumentar trauma'
       isClicButton={true}
-      manejarClic={()=>{console.log('Como estan tonotos')}}
+      manejarClic={manejarClic}
       />
 
         <Boton
       texto='Reiniciar'
       isClicButton={false}
-      manejarClic={()=>{console.log('Adios tonotos')}}
+      manejarClic={reiniciarContador}
       />
         </div>
       

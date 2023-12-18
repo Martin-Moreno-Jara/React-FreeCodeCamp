@@ -31,6 +31,7 @@ html,body{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  min-width: 600px;
 }
 .contenedor-botones{
   display: flex;

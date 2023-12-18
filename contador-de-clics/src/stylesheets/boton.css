@@ -6,8 +6,8 @@ button{
     margin: 20px;
     color: white;
     box-sizing: border-box;
-    border-radius: 5px;
-    font-size: large;
+    border-radius: 10px;
+    font-size: 22px;
     cursor: pointer;
 }
 
@@ -18,6 +18,7 @@ button{
 .boton-clic:hover{
     background-color: rgb(240, 125, 54);
     font-weight: bold;
+    border: 3px solid black;
 }
 
 .boton-reiniciar{
@@ -25,4 +26,6 @@ button{
 }
 .boton-reiniciar:hover{
     background-color: rgb(16, 188, 211);
+    border: 3px solid black;
+    font-weight: bold;
 }
