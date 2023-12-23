@@ -11,8 +11,19 @@ function App() {
   const writeNumber= (number)=>{setInput(input + number)};
   const clearAll= ()=>{setInput('')};
   const calculateResult = ()=>{
-    setInput(evaluate(input))
-  }
+    if(input){
+      try{
+        setInput(evaluate(input))
+
+      }
+      catch{
+        alert('La entrada no es valida')
+      }
+    }else{
+      alert('SyntaxError');
+    }
+      
+  };
 
   return (
     <div className="App">

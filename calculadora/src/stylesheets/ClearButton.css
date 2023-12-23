@@ -13,6 +13,7 @@
     justify-content: center;
     margin-top: 8px;
     cursor: pointer;
+    user-select: none;
 }
 .clear-button:hover{
     background-color: #ebb000;
