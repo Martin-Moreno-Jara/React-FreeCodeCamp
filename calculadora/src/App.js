@@ -4,11 +4,15 @@ import Button from './components/Button'
 import Screen from './components/Screen'
 import ClearButton from './components/ClearButton'
 import {useState} from 'react';
+import {evaluate} from 'mathjs';
 
 function App() {
   const [input,setInput] = useState('');
   const writeNumber= (number)=>{setInput(input + number)};
   const clearAll= ()=>{setInput('')};
+  const calculateResult = ()=>{
+    setInput(evaluate(input))
+  }
 
   return (
     <div className="App">
@@ -41,7 +45,7 @@ function App() {
             
           </div>
           <div  className='row'>
-            <Button write={writeNumber}>=</Button>
+            <Button write={calculateResult}>=</Button>
             <Button write={writeNumber}>0</Button>
             <Button write={writeNumber}>.</Button>
             <Button write={writeNumber}>/</Button>
