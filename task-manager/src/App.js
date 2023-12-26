@@ -1,11 +1,13 @@
 import './App.css';
-import appLogo from './images/app-logo.png';
 import Logo from './components/Logo'
 
 function App() {
   return (
     <div className="task-manager">
-      <Logo></Logo>
+      <Logo/>  {/*Componente del logo*/}
+      <div className='main-task-list'>
+        <h1>Mis tareas</h1>
+      </div>
     </div>
   );
 }
