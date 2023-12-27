@@ -13,6 +13,13 @@
     border: 1px solid white;
     cursor: pointer;
 }
+
+/*when the task is completed*/
+.task-container.completed{
+    background-color: #5a01a7;
+    text-decoration: line-through;
+}
+
 /*texto*/
 .task-text{
     width: 100%;

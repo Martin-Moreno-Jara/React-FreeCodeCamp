@@ -8,7 +8,7 @@ function App() {
       <Logo/>  {/*Componente del logo*/}
       <div className='main-task-list'>
         <h1>Mis tareas</h1>
-        <Task text='la mama de la mama'/>
+        <Task text='la mama de la mama' isCompleted={true}/>
       </div>
     </div>
   );
