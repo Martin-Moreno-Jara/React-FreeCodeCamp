@@ -1,5 +1,6 @@
-import React,{useState} from 'react';
-import '../stylesheets/Form.css'
+import React,{ useState} from 'react';
+import '../stylesheets/Form.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function Form(props){
     const [input,setInput] = useState('');
@@ -11,16 +12,21 @@ function Form(props){
 
     const manageSignal = (e)=>
     {
+        e.preventDefault();
         const newTask = 
         {
-            id:'3548',
-            text:{input}
+            id: uuidv4(),
+            text:input,
+            completed:false
         }
+        props.onSubmit(newTask);
 
     };
 
     return(
-        <div className='task-form'>
+        <form 
+            className='task-form'
+            onSubmit={manageSignal}>
             <input 
             className='task-input'
             type='text'
@@ -31,12 +37,11 @@ function Form(props){
 
             <button 
             className='task-button'
-            onClick={manageSignal}
             >
             Agregar Tarea
             </button>
             
-        </div>
+        </form>
     );
 };
 
