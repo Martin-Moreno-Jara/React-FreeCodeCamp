@@ -12,15 +12,21 @@ function TaskList(){
             const currentTasks = [task, ...tasks]
             setTasks(currentTasks)
         }
-        console.log(tasks)
     };
 
     const completeTask = (id)=>{
-
+        const currentTasks=tasks.map(task =>{
+            if(task.id===id){
+                task.isCompleted = !task.isCompleted;
+            }
+            return task;
+        });
+        setTasks(currentTasks)  
     };
     
     const deleteTask =(id)=>{
-
+        const currentTasks = tasks.filter(task=>task.id!==id);
+        setTasks(currentTasks);
     };
 
     return(
@@ -30,9 +36,13 @@ function TaskList(){
                 {
                   tasks.map(
                     (task)=>
-                    {<Task
-                        text={tasks.text}  
-                        isCompleted={tasks.isCompleted}  />}
+                    <Task
+                        key={task.id}
+                        id={task.id}
+                        text={task.text}  
+                        isCompleted={task.isCompleted}
+                        completeTask={completeTask}
+                        deleteTask={deleteTask}  />
                   )  
                 }
 

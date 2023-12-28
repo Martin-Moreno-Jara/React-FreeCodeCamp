@@ -17,10 +17,9 @@ function Form(props){
         {
             id: uuidv4(),
             text:input,
-            completed:false
+            isCompleted:false
         }
         props.onSubmit(newTask);
-
     };
 
     return(
