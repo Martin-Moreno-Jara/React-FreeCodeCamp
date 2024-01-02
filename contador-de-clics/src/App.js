@@ -2,6 +2,7 @@ import './App.css';
 import jjkLogo from './images/jjk-logo.png';
 import Boton from './componentes/Boton';
 import Contador from './componentes/Contador';
+import React from 'react';
 import {useState} from 'react';
 
 function App() {
